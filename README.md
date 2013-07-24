@@ -24,11 +24,11 @@ The fundamental php &amp; web development class example code
 ####Lecture 7: Basic JavaScript and jQuery  
 ####Lecture 8: Final Project one - simple album
 Simple album service that has function of uploading picture, thumbnailing picture by GD liberary in a album.  
-[[code]](https://github.com/LucienLee/php-class-example/tree/master/simple_album)
+[[code]](https://github.com/LucienLee/php-class-example/tree/master/simple_album) ( simple_album )
 
 ####Lecture 9: Final Project two - final album
 Add memeber system and permission function, and multiple album management.  
-[[code]](https://github.com/LucienLee/php-class-example/tree/master/final_album)
+[[code]](https://github.com/LucienLee/php-class-example/tree/master/final_album) ( final_album )
 
 ####Lecture 10: Use PaaS service to host your web - with pagodabox
 Put web on pagodabox and basic git.  
@@ -37,4 +37,4 @@ Put web on pagodabox and basic git.
 
 
 ---
-Special Thanks TO [GGM](https://github.com/godgunman)
+#####Special Thanks TO [GGM](https://github.com/godgunman)
