@@ -10,7 +10,7 @@
 		$row = get_photo($id);
 	}
 
-	if(!isOwner($row['AlbumID']){
+	if(!isOwner($row['AlbumID'])){
 		header('Location: index.php');
 	}
 ?>
