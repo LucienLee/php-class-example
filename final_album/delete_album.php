@@ -27,5 +27,5 @@
 	$sql = "DELETE FROM `Album` WHERE `ID` = $id";
 	$result = mysql_query($sql, $link);
 
-	header("location:index.php");
+	header("location: listAlbum.php");
 ?>

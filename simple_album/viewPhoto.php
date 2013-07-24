@@ -34,7 +34,7 @@
 <?php function js_section(){ ?>
 	<script>
 		$('.delete-img').click(function(e){
-			e.preventDefault;
+			e.preventDefault();
 			if(confirm("確定要刪除嗎？")){
 				location.href = e.attr('href');
 			};
