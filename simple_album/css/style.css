@@ -1,0 +1,21 @@
+textarea{
+	width: 97%;
+	resize:none;
+}
+
+.photo-form{
+	width: 90%;
+	margin: 0 auto;
+}
+
+.sidebar .btn-toolbar{
+	text-align: center;
+}
+
+.description{
+	min-height: 240px;
+}
+
+.detailImg{
+	text-align: center;
+}
