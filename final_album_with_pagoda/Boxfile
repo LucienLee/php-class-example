@@ -1,0 +1,9 @@
+web1:
+  name: albumapp
+  shared_writable_dirs: [photo, thumbnail] 
+  php_date_timezone: Asia/Taipei
+  php_extensions: [mysql, gd]
+  php_file_uploads: On 
+db1:
+  name: albumdb
+  type: mysql
