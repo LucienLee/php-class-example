@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+	<title>survey</title>
+</head>
+<body>
+	<form action="confirm.php" method="post">
+		姓名：<input type="text" name="user" size="40"><br>
+		E-mail: <input type="text" name="email" placeholder="example@example.com" size="30"><br>
+		年齡：
+			<input type="radio" name="age" value="age1">未滿20
+			<input type="radio" name="age" value="age2">20~29
+			<input type="radio" name="age" value="age3">30~39
+			<input type="radio" name="age" value="age4">40~49
+			<input type="radio" name="age" value="age5">超過50
+		<br>
+		你用過什麼牌子的手機？
+		<input type="checkbox" name="phone[]" value="iPhone">iPhone
+		<input type="checkbox" name="phone[]" value="HTC">HTC
+		<input type="checkbox" name="phone[]" value="Nokia">Nokia
+		<input type="checkbox" name="phone[]" value="blackberry">blackberry
+		<input type="checkbox" name="phone[]" value="samsung">samsung
+		<br>
+		你的門號是哪一家的？
+		<select name="number" >
+			<option value="中華電信">中華電信</option>
+			<option value="台灣大哥大">台灣大哥大</option>
+			<option value="遠傳">遠傳</option>
+			<option value="威寶">威寶</option>
+		</select>
+		<br>
+		其他想說的話：
+		<br>
+		<textarea name="other" id="" cols="30" rows="10"></textarea>
+		<br>
+		<input type="reset" value="重填">
+		<input type="submit" value="送出">
+	</form>
+</body>
+</html>
