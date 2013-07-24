@@ -2,14 +2,19 @@
 	require_once("utility.php");
 	$link = connectDB();
 
-	if (!isset($_GET['photo_id']) || !isOwner($_GET['photo_id']) ) {
+	if (!isset($_GET['photo_id']) ) {
+		header('Location: index.php');
+	}else{
+		$id = $_GET['photo_id'];
+		$sql = "SELECT * FROM `Photo` WHERE `ID` = '$id'";
+		$result = mysql_query($sql, $link);
+		$row = mysql_fetch_assoc($result);
+	}
+
+	if(!isOwner($row['AlbumID'])){
 		header('Location: index.php');
 	}else{
 		//刪除檔案
-		$id = $_GET['photo_id'];
-		$sql = "SELECT `Filename` FROM `Photo` WHERE `ID` = '$id'";
-		$result = mysql_query($sql, $link);
-		$row = mysql_fetch_assoc($result);
 		$photo_path = realpath("./photo/".$row['Filename']);
 		$thumbnail_path = realpath("./thumbnail/".$row['Filename']);
 

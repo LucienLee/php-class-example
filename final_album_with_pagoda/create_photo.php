@@ -17,10 +17,10 @@
 
 			$photo_filename = "./photo/$filename";
 			$thumbnail_filename = "./thumbnail/$filename";
-
+			
 			resize_photo($file_tmp, $ext, $photo_filename, 720);
-			resize_photo($file_tmp, $ext, $thumbnail_filename, 270);
-
+			resize_thumbnail($file_tmp, 'jpg', $thumbnail_filename, 260, 180);
+			
 			$sql = "INSERT INTO Photo(Name, Filename, Comment, AlbumID) VALUES('$name', '$filename', '$comment', '$albumid')";
 			$result = mysql_query($sql,$link);
 			

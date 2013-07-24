@@ -23,10 +23,10 @@
 				<h3><?= $row['Name'] ?></h3>
 				<p><?= $row['Comment'] ?></p>
 			</div>
-			<?php if(isOwner($id)){ ?>
+			<?php if( isOwner($row['AlbumID']) ){ ?>
 			<div class="btn-toolbar">
-			<a class="btn" href="editPhoto.php?photo_id=<?= $row['ID'] ?>">更新圖片</a>
-			<a class="btn btn-danger delete-img" href="delete_photo.php?photo_id=<?= $row['ID'] ?>">刪除圖片</a>
+				<a class="btn" href="editPhoto.php?photo_id=<?= $row['ID'] ?>">更新圖片</a>
+				<a class="btn btn-danger delete-img" href="delete_photo.php?photo_id=<?= $row['ID'] ?>">刪除圖片</a>
 			</div>
 			<?php } ?>
 			
@@ -39,7 +39,7 @@
 		$('.delete-img').click(function(e){
 			e.preventDefault();
 			if(confirm("確定要刪除嗎？")){
-				location.href = e.attr('href');
+				window.location = $(this).attr('href');
 			};
 		});
 	</script>

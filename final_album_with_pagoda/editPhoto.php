@@ -1,15 +1,20 @@
+<?php include('_site_header.php') ?>
 <?php 
 	require_once("utility.php");
 	require 'get_photo.php';
 
-	if (!isset($_GET['photo_id']) || !isOwner($_GET['photo_id']) ) {
+	if (!isset($_GET['photo_id']) ){
+		header('Location: index.php');
+	}else{
+		$id = $_GET['photo_id'];
+		$row = get_photo($id);
+	}
+
+	if(!isOwner($_GET['photo_id'])){
 		header('Location: index.php');
 	}
-	$id = $_GET['photo_id'];
-	$row = get_photo($id);
 ?>
 
-<?php include('_site_header.php') ?>
 <div class="container">
 	<div class="row">
 		<div class="span8 detailImg">

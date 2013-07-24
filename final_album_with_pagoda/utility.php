@@ -115,6 +115,14 @@ function resize_photo($src_file, $src_ext, $dest_name, $max_size)
   imagedestroy($thumb); 
 }
 
+function resize_thumbnail($src, $ext,$des, $width, $height){
+
+    require_once("lib/ThumbLib.inc.php");
+
+    $thumb = PhpThumbFactory::create($src);
+    $thumb->adaptiveResize($width, $height);
+    $thumb->save($des, $ext);
+}
 
 
 ?>

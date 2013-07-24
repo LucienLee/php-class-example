@@ -49,14 +49,17 @@ function resize_photo($src_file, $src_ext, $dest_name, $max_size)
   $src_w = imagesx($src);
   $src_h = imagesy($src);
  
+
   //算出縮圖大小
-  if($src_w > $src_h)
-  {
+  if( $src_w < $max_size && $src_h < $max_size ){
+    $thumb_w = $src_w;
+    $thumb_h = $src_h;
+  
+  }elseif($src_w > $src_h){
     $thumb_w = $max_size;
     $thumb_h = intval($src_h / $src_w * $thumb_w);
   }
-  else
-  {
+  else{
     $thumb_h = $max_size;
     $thumb_w = intval($src_w / $src_h * $thumb_h);
   }
@@ -75,6 +78,13 @@ function resize_photo($src_file, $src_ext, $dest_name, $max_size)
   imagedestroy($thumb); 
 }
 
+function resize_thumbnail($src, $ext,$des, $width, $height){
 
+    require_once("lib/ThumbLib.inc.php");
+
+    $thumb = PhpThumbFactory::create($src);
+    $thumb->adaptiveResize($width, $height);
+    $thumb->save($des, $ext);
+}
 
 ?>
