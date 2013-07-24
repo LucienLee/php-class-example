@@ -33,8 +33,8 @@ Add memeber system and permission function, and multiple album management.
 ####Lecture 10: Use PaaS service to host your web - with pagodabox
 Put web on pagodabox and basic git.  
 [[example]](album.gopagoda.com) / 
-[[code]](https://github.com/LucienLee/php-class-example/tree/master/final_album_with_pagoda)
+[[code]](https://github.com/LucienLee/php-class-example/tree/master/final_album_with_pagoda) ( final_album_with_pagoda )
 
 
 ---
-#####Special Thanks TO [GGM](https://github.com/godgunman)
+#####Special Thanks To [GGM](https://github.com/godgunman)
