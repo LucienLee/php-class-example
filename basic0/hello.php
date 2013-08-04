@@ -3,7 +3,7 @@
 // 	這是註解的另外一種方式
 
 /*	這是第一份程式碼，會簡單印出hello world到螢幕上。網頁執行的路徑是
-	http://localhost/ex1.php
+	http://localhost/hello.php
 */
 
 echo 'hello world';

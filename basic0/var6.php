@@ -1,5 +1,6 @@
 <?php
 	/*運算子與真值表*/
+	// last example
 
 	echo 7*5%8 ."<br>";
 	echo (100 == 100),"<br>";

@@ -8,7 +8,7 @@
 </head>
 <body>
 	<?php if(!isset($_POST['confirm'])){ ?>
-	<form action="pratice.php" method="post">
+	<form action="practice.php" method="post">
 		<table>
 			<th>飲料訂購單</th>
 			<tr>
@@ -52,6 +52,7 @@
 		$drink5 = $_POST['drink5'];
 		$sum = 0;
 
+		//算出紅配綠有幾組，以及配完剩下的飲料
 		$diff = $drink1 - $drink2;
 		if( $diff > 0 ){
 			$less = $drink2;

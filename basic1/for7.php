@@ -1,6 +1,5 @@
 <?php
-	/*	使用兩層迴圈，來判斷1到$numMax 之間有哪些數字是質數。
-	*/
+	/*	使用兩層迴圈，來判斷1到$numMax 之間有哪些數字是質數。 */
 	$numMax = $_GET['num'];
 
 	for ($num = 2; $num <= $numMax; $num++) {

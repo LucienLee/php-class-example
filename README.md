@@ -6,7 +6,7 @@ The fundamental php &amp; web development class example code
 ---
 
 ####Lecture 1: Start to Build your Web 
-[[slide]](https://speakerdeck.com/lucienlee/start-to-build-your-web) / [[code]](https://github.com/LucienLee/php-class-example/tree/master/basic1) ( Basic 1 )
+[[slide]](https://speakerdeck.com/lucienlee/start-to-build-your-web) / [[code]](https://github.com/LucienLee/php-class-example/tree/master/basic0) ( Basic 0 )
 
 ####Lecture 2: PHP 101: flow control
 [[slide]](https://speakerdeck.com/lucienlee/php-101-flow-control) / [[code]](https://github.com/LucienLee/php-class-example/tree/master/basic1) ( Basic 1 )

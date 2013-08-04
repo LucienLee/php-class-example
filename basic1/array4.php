@@ -8,7 +8,7 @@
 	'kiwifruit', 'mango', 'lemon', 'pear', 'plum');
 
 	$len = count($fruit);
-	for($i=0; $i<$len;$i++) {
+	for( $i=0; $i<$len;$i++ ) {
 		echo $fruit[$i].'<br>';
 	}
 
