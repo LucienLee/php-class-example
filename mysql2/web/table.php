@@ -1,10 +1,11 @@
 <?php
-	$link = mysql_connect('localhost',
-	'root', 'yourpw');
-	mysql_select_db("users",$link);
-	$sql = "SELECT p.*, s.name as school_name FROM `profile` p, `school` s WHERE s.sid = p.school";
-	// $sql = "SELECT p.*, s.name as school_name FROM `users`.`profile` p, `users`.`school` s WHERE s.sid = p.school";
-	mysql_query('SET NAMES utf8');
+	
+	require_once('db.php');
+	$link = connectDB('restaurant');
+	$sql = "SELECT Food.Name as FName, Store.Name as SName, Address, Price  FROM Food LEFT JOIN Store ON Food.Store = Store.StoreID
+			UNION
+			SELECT Food.Name as FName, Store.Name as SName, Address, Price  FROM Food RIGHT JOIN Store ON Food.Store = Store.StoreID";
+
 	$result = mysql_query($sql, $link);
 ?>
 <!DOCTYPE html>
@@ -19,29 +20,22 @@
 		<table class='table table-hover'>
 			<thead>
 				<tr>
-					<th>id</th>
-					<th>name</th>
-					<th>sex</th>
-					<th>address</th>
-					<th>school</th>
+					<th>食物</th>
+					<th>店家</th>
+					<th>地址</th>
+					<th>價錢</th>	
 				</tr>
 			</thead>
 			<tbody>
-<?php
-	while($row = mysql_fetch_array($result)) {
-		echo '<tr>';
-		echo '<td>'.$row['id'].'</td>';
-		echo '<td>'.$row['name'].'</td>';
-		echo '<td>'.$row['sex'].'</td>';
-		echo '<td>'.$row['address'].'</td>';
-		echo '<td>'.$row['school_name'].'</td>';
-		echo '</tr>';
-	}
-?>
+			<?php while($row = mysql_fetch_array($result)) { ?>
+					<tr>
+						<td><?= $row['FName'] ?></td>
+						<td><?= $row['SName'] ?></td>
+						<td><?= $row['Address'] ?></td>
+						<td><?= $row['Price'] ?></td>
+					</tr>
+			<?php } ?>
 			</tbody>
-
 		</table>
-		<script src="http://code.jquery.com/jquery.js"></script>
-		<script src="js/bootstrap.min.js"></script>
 	</body>
 </html>

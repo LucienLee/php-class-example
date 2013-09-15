@@ -7,10 +7,10 @@
 	} else {
 		echo '連線成功';
 	}
-	// mysql_select_db("users",$link);
-	// $sql = "SELECT * FROM `profile`";
+	
+	mysql_select_db("restaurant",$link);
+	$sql = "SELECT * FROM `Food`";
 
-	$sql = "SELECT * FROM `users`.`profile`";
 	mysql_query('SET NAMES utf8');
 	$result = mysql_query($sql, $link);
 
