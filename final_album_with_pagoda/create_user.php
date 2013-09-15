@@ -3,7 +3,7 @@
 	$link = connectDB();
 
 	$account = $_POST['account'];
-	$psword = $_POST['psword'];
+	$psword = md5($_POST['psword']);
 	$name = $_POST['name'];
 
 	if( !empty($account) && !empty($psword) && !empty($name) ){
