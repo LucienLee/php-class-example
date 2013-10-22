@@ -29,7 +29,7 @@
 	<form method="POST" action="html_form3.php">
 		input <input type="text" name="number" size=40><br>
 		<input type="submit" value="submit">
-		<input type="hidden" value="1">
+		<input type="hidden" name="check" value="1">
 	</form>
 
 </body>

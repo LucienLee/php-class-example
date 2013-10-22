@@ -43,7 +43,7 @@
 			<input type="hidden" value="true" name="confirm">
 		</table>
 	</form>
-	<p>飲料數量超過十杯打九折。</p>
+	<p>飲料數量滿十杯打九折。</p>
 	<?php }else{
 		$drink1 = $_POST['drink1'];
 		$drink2 = $_POST['drink2'];
@@ -62,15 +62,15 @@
 
 	<h3>親愛的顧客，您點的是：</h3>
 	<p>伯爵紅茶 <?= $drink1 ?>杯</p>
-	<p>冬瓜青茶 <?= $drink2 ?>杯</p>
-	<p>茉香綠茶 <?= $drink3 ?>杯</p>
+	<p>茉香綠茶 <?= $drink2 ?>杯</p>
+	<p>冬瓜青茶 <?= $drink3 ?>杯</p>
 	<p>凍頂烏龍 <?= $drink4 ?>杯</p>
 	<p>珍珠奶茶 <?= $drink5 ?>杯</p>
 	<?php if( $num  >= 10 ){ ?>
 		<p>有<?= $num ?>杯飲料打九折</p>
 	<?php } ?>
 
-	<p>總計 <?= $sum ?>元</p>
+	<p>總計 <?= ceil($sum) ?>元</p>
 	<?php } ?>
 </body>
 </html>

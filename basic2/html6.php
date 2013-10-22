@@ -21,9 +21,9 @@ $isprime = check_prime($num);
 	</head>
 	<body>
 		<?php if($isprime): ?>
-			<h2>你輸入的數字 <?=$num ?> 是質數 <h2>
+			<h2>你輸入的數字 <?=$num ?> 是質數 </h2>
 		<?php else: ?>
-			<h2>你輸入的數字 <?=$num ?> 不是質數 <h2>
+			<h2>你輸入的數字 <?=$num ?> 不是質數 </h2>
 		<?php endif; ?>
 
 	</body>
