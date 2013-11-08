@@ -12,7 +12,7 @@
 	$store = $_GET['store'];
 		
 	$sql = "INSERT INTO `restaurant`.`Food` ( `Name`, `Price`,`Store`) 
-	VALUES ('$name', '$sex', '$store');";
+	VALUES ('$name', '$price', '$store');";
 	mysql_query('SET NAMES utf8');	
 	mysql_query($sql, $link);	
 	
