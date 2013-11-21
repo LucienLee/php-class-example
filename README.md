@@ -24,6 +24,7 @@ The fundamental php &amp; web development class example code
 ####Lecture 7: Basic JavaScript and jQuery  
 ####Lecture 8: Final Project one - simple album
 Simple album service that has function of uploading picture, thumbnailing picture by GD liberary in a album.  
+[[slide]](https://speakerdeck.com/lucienlee/simple-album) / 
 [[code]](https://github.com/LucienLee/php-class-example/tree/master/simple_album) ( simple_album )
 
 ####Lecture 9: Final Project two - final album
