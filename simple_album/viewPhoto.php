@@ -36,7 +36,7 @@
 		$('.delete-img').click(function(e){
 			e.preventDefault();
 			if(confirm("確定要刪除嗎？")){
-				location.href = e.attr('href');
+				location.href = $(this).attr('href');
 			};
 		});
 	</script>
