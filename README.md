@@ -29,7 +29,7 @@ Simple album service that has function of uploading picture, thumbnailing pictur
 
 ####Lecture 9: Final Project two - final album
 Add memeber system and permission function, and multiple album management.  
-[[code]](https://github.com/LucienLee/php-class-example/tree/master/final_album) ( final_album )
+[[slide]](https://speakerdeck.com/lucienlee/final-album) / [[code]](https://github.com/LucienLee/php-class-example/tree/master/final_album) ( final_album )
 
 ####Lecture 10: Use PaaS service to host your web - with pagodabox
 Put web on pagodabox and basic git.  
