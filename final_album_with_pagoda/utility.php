@@ -1,10 +1,56 @@
 <?php
 
 function connectDB() {
-	$link = mysql_connect("localhost", "root", "root");
-	mysql_query('SET NAMES utf8');
-	mysql_select_db('album');
-	return $link;
+	$noDatabase = true;
+  if (isset($_SERVER['DB1_HOST']) && isset($_SERVER['DB1_USER']) && isset($_SERVER['DB1_PASS']) && isset($_SERVER['DB1_NAME'])) {
+    $link = mysql_connect($_SERVER['DB1_HOST'], $_SERVER['DB1_USER'], $_SERVER['DB1_PASS']);
+    if (!$link) {
+      $noDatabase = true;
+      die('Could not connect: ' . mysql_error());
+    }
+    $noDatabase = !mysql_select_db($_SERVER['DB1_NAME'], $link);
+  }else{
+    //origin connect on localhost
+    $link = mysql_connect("localhost", "root", "root");
+  	mysql_query('SET NAMES utf8');
+  	mysql_select_db('album');
+  }
+	
+  //Copy from album.sql
+
+  $sql_album = "CREATE TABLE IF NOT EXISTS `Album` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Name` varchar(128) NOT NULL,
+  `Owner` varchar(32) NOT NULL,
+  `Timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;";
+
+  mysql_query($sql_album);
+
+  $sql_photo = "CREATE TABLE IF NOT EXISTS `Photo` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Name` varchar(128) NOT NULL,
+  `Filename` varchar(64) NOT NULL,
+  `Comment` text,
+  `AlbumID` int(11) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=25 ;";
+
+  mysql_query($sql_photo);
+
+  $sql_user ="CREATE TABLE IF NOT EXISTS `User` (
+  `Account` varchar(32) NOT NULL,
+  `Password` varchar(32) NOT NULL,
+  `Name` varchar(32) NOT NULL,
+  PRIMARY KEY (`Account`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
+
+  mysql_query($sql_user);
+
+
+
+  return $link;
 }
 
 function isOwner($album){
